@@ -1,0 +1,28 @@
+.Polaris-Frame--hasTopBar .Polaris-Frame__Main {
+    padding-top: 1.9rem !important;
+}
+
+.Polaris-Icon--colorBase svg {
+    fill: var(--p-color-icon-on-color) !important;
+}
+
+@media (min-width: 48em) {
+    .Polaris-Page__Content {
+        padding-top: var(--p-space-12) !important;
+    }
+}
+
+
+.fixed__bulk {
+    position: fixed;
+    bottom: 70px;
+    z-index: 10000;
+    left: 700px;
+}
+
+.status__wrapper {
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+    
+}
