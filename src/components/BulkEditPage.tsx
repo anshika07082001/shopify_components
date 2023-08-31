@@ -195,7 +195,7 @@ const BulkEditPage = (props: bulkProps) => {
       />
     );
   };
-  console.log(props);
+
   const rowMarkup = props.state.changingData.map(
     (
       { Title, img, Status, tagsArr, price, cost_price, id, weight }: any,

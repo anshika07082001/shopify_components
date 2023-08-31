@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
-import Site from "./components/Site";
+import FrameComponent from "./components/FrameComponent";
 
 function App() {
-  return <Site />;
+  return <FrameComponent />;
 }
 
 export default App;

@@ -12,16 +12,12 @@ import {
   AnalyticsBarHorizontalMinor,
   CustomersMajor,
   DiscountsMajor,
-  EmailMajor,
-  ExchangeMajor,
   HomeMinor,
-  LogOutMinor,
   MarketingMajor,
   OrdersMinor,
   ProductsMinor,
   QuestionMarkMajor,
   SlideshowMajor,
-  StoreMajor,
 } from "@shopify/polaris-icons";
 import { useState, useCallback } from "react";
 import BodyComponent from "./BodyComponent";
@@ -36,7 +32,6 @@ import MarketingComponent from "./MarketingComponent";
 import ProductsComponent from "./ProductsComponent";
 import { data } from "./jewelery";
 import BulkEditPage from "./BulkEditPage";
-import BulkEditTopbar from "./bulkEdit/BulkEditTopbar";
 import { tableHeadings, userMenu } from "./CommonData";
 
 const FrameComponent = () => {
@@ -77,15 +72,6 @@ const FrameComponent = () => {
     setSearchValue("");
   }, []);
 
-  const handleSearchChange = useCallback((value: string) => {
-    setSearchValue(value);
-    setIsSearchActive(value.length > 0);
-  }, []);
-
-  const handleNavigationToggle = useCallback(() => {
-    console.log("toggle navigation visibility");
-  }, []);
-
   const logo = {
     width: 40,
     topBarSource: "https://www.syaid.org/brand-logo.ico",
@@ -110,15 +96,6 @@ const FrameComponent = () => {
         { content: "Shopify help center" },
         { content: "Community forums" },
       ]}
-    />
-  );
-
-  const searchFieldMarkup = (
-    <TopBar.SearchField
-      onChange={handleSearchChange}
-      value={searchValue}
-      placeholder="Search"
-      showFocusBorder
     />
   );
 
@@ -149,10 +126,8 @@ const FrameComponent = () => {
       userMenu={userMenuMarkup}
       secondaryMenu={secondaryMenuMarkup}
       searchResultsVisible={isSearchActive}
-      searchField={searchFieldMarkup}
       searchResults={searchResultsMarkup}
       onSearchResultsDismiss={handleSearchResultsDismiss}
-      onNavigationToggle={handleNavigationToggle}
     />
   );
   const navigation = (
